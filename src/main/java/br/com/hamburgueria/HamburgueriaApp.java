@@ -2,6 +2,8 @@ package br.com.hamburgueria;
 
 import br.com.hamburgueria.pojo.ItemIncluso;
 import br.com.hamburgueria.pojo.Produto;
+import br.com.hamburgueria.pojo.ProdutoInternacional;
+import br.com.hamburgueria.pojo.ProdutoNacional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,13 @@ public class HamburgueriaApp { //classe principal
         }
 
         System.out.println("Acabaram-se os itens");
+
+        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Vegan"); //testando a herança
+        meuProdutoNacional.setImpostoNacional(0.23); //testando a implementação
+        System.out.println(meuProdutoNacional.getImpostoNacional());
+
+        ProdutoInternacional meuProdutoInternacional = new ProdutoInternacional("Vegan");//Polimorfismo: testando é possível assim reescrever um dos métodos
+        meuProdutoInternacional.setValor(-150.00);
 
     }
 

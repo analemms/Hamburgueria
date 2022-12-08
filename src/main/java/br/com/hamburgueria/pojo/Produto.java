@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Produto { //classe produto (modificador, class e nome da class) e seus atributos(modificador, tipo e nome do atributo)
     private String nome;//encapsulamento dos atributos - classe restrita - tipo da variável e nome
-    private double valor;
+    protected double valor;
     private String tamanho;
     private String marca;
     private List<ItemIncluso> itensInclusos; //Classe e Estrutura de dado - lista
@@ -12,6 +12,10 @@ public class Produto { //classe produto (modificador, class e nome da class) e s
     public Produto () { //estrutura de um construtor (modificador e nome da classe)
         this.marca = "Vegan";
 
+    }
+
+    public Produto(String marcaInicial) { //criei agr esse construtor p produto naciaonl
+    this.marca = marcaInicial;
     }
 
     public double getValor() { //parâmetro de busca de valor

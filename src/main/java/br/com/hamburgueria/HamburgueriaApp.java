@@ -5,11 +5,28 @@ import br.com.hamburgueria.pojo.Produto;
 import br.com.hamburgueria.pojo.ProdutoInternacional;
 import br.com.hamburgueria.pojo.ProdutoNacional;
 
+import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HamburgueriaApp { //classe principal
     public static void main(String[] args) { //método principal
+        LocalDate data = LocalDate.now(); //Datas
+        System.out.println(data);
+        LocalTime hora = LocalTime.now();
+        System.out.println(hora);
+        LocalDateTime completo = LocalDateTime.now();
+        System.out.println(completo);
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String dataformatada = formatador.format(completo);
+        System.out.println(dataformatada);
+
         Produto meuProduto = new Produto(); //criando um novo produto
 
         meuProduto.setNome("Combo 1");
@@ -30,14 +47,6 @@ public class HamburgueriaApp { //classe principal
 
         meuProduto.setItensInclusos(itensInclusos);
 
-        System.out.println(meuProduto.getNome());
-        System.out.println(meuProduto.getItensInclusos().size()); //pegando meus itens e mostrando o tamanho da lista
-        System.out.println(meuProduto.getValor());
-        System.out.println(meuProduto.getMarca()); //já foi definido, a marca vem antes
-
-        System.out.println(meuProduto.getItensInclusos().get(0).getNome());
-        System.out.println(meuProduto.getItensInclusos().get(0).getQuantidade());
-
         System.out.println("Começando a apresentar os itens");
 
         for (ItemIncluso itemAtual : meuProduto.getItensInclusos()) {//Laços - itens inclusos é a lista - mostrar o nome e qntd de cada um dos itens
@@ -52,7 +61,7 @@ public class HamburgueriaApp { //classe principal
         System.out.println(meuProdutoNacional.getImpostoNacional());
 
         ProdutoInternacional meuProdutoInternacional = new ProdutoInternacional("Vegan");//Polimorfismo: testando é possível assim reescrever um dos métodos
-        meuProdutoInternacional.setValor(-150.00);
+        meuProdutoInternacional.setValor(49.99);
 
     }
 

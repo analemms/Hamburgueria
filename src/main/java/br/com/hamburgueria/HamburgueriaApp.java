@@ -15,8 +15,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HamburgueriaApp { //classe principal
-    public static void main(String[] args) { //método principal
+public class HamburgueriaApp { //Classe principal
+    public static void main(String[] args) { //Método principal
         LocalDate data = LocalDate.now(); //Datas
         System.out.println(data);
         LocalTime hora = LocalTime.now();
@@ -27,16 +27,16 @@ public class HamburgueriaApp { //classe principal
         String dataformatada = formatador.format(completo);
         System.out.println(dataformatada);
 
-        Produto meuProduto = new Produto(); //criando um novo produto
+        Produto meuProduto = new Produto(); //Criando um novo produto
 
         meuProduto.setNome("Combo 1");
         meuProduto.setValor(49.99);
         meuProduto.setTamanho("Serve 2 pessoas");
 
 
-        List<ItemIncluso> itensInclusos = new ArrayList<>(); //criação de uma variável itens inclusos sendo uma lista de itens
+        List<ItemIncluso> itensInclusos = new ArrayList<>(); //Criação de uma variável itens inclusos sendo uma lista de itens
 
-        ItemIncluso primeiroItemIncluso = new ItemIncluso("Hamburguers artesanais", 2);//objeto representados por classes
+        ItemIncluso primeiroItemIncluso = new ItemIncluso("Hamburguers artesanais", 2);//Objeto representados por classes
         itensInclusos.add(primeiroItemIncluso); //adicionando itens na lista
 
         ItemIncluso segundoItemIncluso = new ItemIncluso("Porções de batata frita", 2);
@@ -56,7 +56,7 @@ public class HamburgueriaApp { //classe principal
 
         System.out.println("Acabaram-se os itens");
 
-        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Vegan"); //testando a herança
+        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Vegan"); //Testando a herança
         meuProdutoNacional.setImpostoNacional(0.23); //testando a implementação
         System.out.println(meuProdutoNacional.getImpostoNacional());
 

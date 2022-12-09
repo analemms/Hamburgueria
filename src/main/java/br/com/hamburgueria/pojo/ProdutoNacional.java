@@ -4,13 +4,13 @@ import br.com.hamburgueria.interfaces.Importante;
 
 public class ProdutoNacional extends Produto implements Importante { //Herança
 
-    private double impostoNacional; // implementando as coisas que são específicas do produto nacional e aplicando encapsulamento no campo
+    private double impostoNacional; // Implementando as coisas que são específicas do produto nacional e aplicando encapsulamento no campo
 
-    public ProdutoNacional (String marcaInicial) {
+    public ProdutoNacional (String marcaInicial) { //construtor
         super (marcaInicial);
     }
 
-    public double getImpostoNacional() { //quando alguém chamar o get imposto naciona, o retorno é o imposto nacional
+    public double getImpostoNacional() { //Quando alguém chamar o get imposto nacional, o retorno é o imposto nacional
         return this.impostoNacional;
     }
 

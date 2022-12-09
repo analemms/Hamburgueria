@@ -4,7 +4,7 @@ public class ItemIncluso {
     private String nome;
     private int quantidade;
 
-    public ItemIncluso (String nomeInicial, int quantidadeIncial){ //construtor
+    public ItemIncluso (String nomeInicial, int quantidadeIncial){ //Construtor
         this.nome = nomeInicial;
         this.quantidade = quantidadeIncial;
 

@@ -9,11 +9,11 @@ public class ProdutoInternacional extends Produto implements Importante { //hera
         super (marcaInicial);
     }
 
-    public void setValor(double novoValor) { //parâmetro de atribuição de valor - aplicando Polimorfismo
+    public void setValor(double novoValor) { //Parâmetro de atribuição de valor - aplicando Polimorfismo
         if (novoValor > -150) { //Estrutura de decisão
             this.valor = novoValor;
         } else {
-            throw new IllegalArgumentException("Os valores necessitam ser maiores que -150.00!");//lançando uma exceção - argumento passado n é válido
+            throw new IllegalArgumentException("Os valores necessitam ser maiores que -150.00!");//Lançando uma exceção - argumento passado n é válido
         }
     }
 

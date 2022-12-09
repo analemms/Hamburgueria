@@ -2,31 +2,31 @@ package br.com.hamburgueria.pojo;
 
 import java.util.List;
 
-public class Produto { //classe produto (modificador, class e nome da class) e seus atributos(modificador, tipo e nome do atributo)
-    private String nome;//encapsulamento dos atributos - classe restrita - tipo da variável e nome
+public class Produto { //Classe produto (modificador, class e nome da class) e seus atributos(modificador, tipo e nome do atributo)
+    private String nome;//Encapsulamento dos atributos - classe restrita - tipo da variável e nome
     protected double valor;
     private String tamanho;
     private String marca;
     private List<ItemIncluso> itensInclusos; //Classe e Estrutura de dado - lista
 
-    public Produto () { //estrutura de um construtor (modificador e nome da classe)
+    public Produto () { //Estrutura de um construtor (modificador e nome da classe)
         this.marca = "Vegan";
 
     }
 
-    public Produto(String marcaInicial) { //criei agr esse construtor p produto naciaonl
+    public Produto(String marcaInicial) { //Criei agr esse construtor p produto nacional
     this.marca = marcaInicial;
     }
 
-    public double getValor() { //parâmetro de busca de valor
+    public double getValor() { //Parâmetro de busca de valor
         return this.valor;
-    } //método: modificador, tipo do retorno, nome do método
+    } //Método: modificador, tipo do retorno, nome do método
 
-    public void setValor(double novoValor) { //parâmetro de atribuição de valor
+    public void setValor(double novoValor) { //Parâmetro de atribuição de valor
         if (novoValor > 0) { //Estrutura de decisão
         this.valor = novoValor;
         } else {
-            throw new IllegalArgumentException("Os valores necessitam ser maiores que 0!");//lançando uma exceção - argumento passado n é válido
+            throw new IllegalArgumentException("Os valores necessitam ser maiores que 0!");//Lançando uma exceção - argumento passado n é válido
         }
     }
 
